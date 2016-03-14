@@ -4,21 +4,26 @@ RESTFUL API Skeleton
 This project was created for me at the beggining 'cause I love RESTFUL API. 
 It's a simple test Api with a User.
 
-The REST parts is managed by FOSRestBundle
-The DB is managed by Doctrine.
+The REST parts is managed by FOSRestBundle and the DB is managed by Doctrine.
 
 Starting the project : 
 
 `vagrant up`
-`vagrant ssh` 
+
+`vagrant ssh`
+
 `cd /var/www/rest`
+
 `composer install`
  
 Generate database and loading fixtures :
  
 `bin/console doctrine:database:create` 
+
 `bin/console doctrine:schema:update` 
+
 `bin/console doctrine:fixtures:load` 
+
 
 Testing the API : 
 
@@ -26,7 +31,7 @@ Testing the API :
 
 
 
-
+======
 
 Copyright © 2016 Jérôme Schaeffer <jsc@opcoding.eu>
 This work is free. You can redistribute it and/or modify it under the
