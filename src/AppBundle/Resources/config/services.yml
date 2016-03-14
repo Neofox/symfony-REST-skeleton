@@ -1,0 +1,17 @@
+parameters:
+
+services:
+    repository.user:
+        class: AppBundle\Repository\UserRepository
+        factory: ["@doctrine.orm.default_entity_manager", getRepository]
+        arguments: ['AppBundle:User']
+
+    gateway.user:
+        class: AppBundle\Services\UserGateway
+        arguments:
+            - "@repository.user"
+            - "@doctrine.orm.default_entity_manager"
+
+    service.user:
+        class: AppBundle\Services\UserService
+        arguments: ["@gateway.user"]

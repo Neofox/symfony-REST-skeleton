@@ -1,0 +1,10 @@
+_welcome:
+    path:      /
+    defaults:  { _controller: AppBundle:Default:index }
+
+#rest
+
+rest:
+  type: rest
+  resource: "routing_rest.yml"
+  prefix: /api
